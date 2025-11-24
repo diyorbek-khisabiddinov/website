@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загрузка файлов - СРС №2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Загрузка файлов на веб-сайт</h1>
+            <p>СРС №2: Изучение способов реализации загрузки файлов</p>
+        </header>
+
+        <main>
+            <div class="upload-section">
+                <form id="uploadForm" enctype="multipart/form-data">
+                    <div class="file-input-container">
+                        <input type="file" id="fileInput" name="files[]" multiple accept=".jpg, .jpeg, .png, .pdf">
+                        <label for="fileInput" class="file-input-label">
+                            <span class="file-input-icon">📁</span>
+                            <span class="file-input-text">Выберите файлы</span>
+                            <span class="file-input-hint">(JPG, PNG, PDF)</span>
+                        </label>
+                    </div>
+
+                    <div class="file-list-container">
+                        <h3>Выбранные файлы:</h3>
+                        <div id="fileList" class="file-list"></div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" id="uploadButton" class="upload-button">
+                            <span class="button-text">Загрузить файлы</span>
+                            <span class="button-loading" style="display: none;">Загрузка...</span>
+                        </button>
+                    </div>
+                </form>
+
+                <div id="uploadResult" class="upload-result"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Практическая работа по веб-разработке</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
